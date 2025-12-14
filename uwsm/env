@@ -1,0 +1,6 @@
+export GTK_THEME=Nordic
+
+# Start clipboard history daemon
+wl-paste --type text --watch cliphist store &
+wl-paste --type image --watch cliphist store &
+export ICON_THEME=Papirus-Dark

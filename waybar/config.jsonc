@@ -1,0 +1,64 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 4,
+    
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "wireplumber",
+        //"network",
+        "tray",
+        "clock",
+        "custom/power"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{id}",
+        "on-click": "activate",
+        "sort-by-number": true
+    },
+
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 50,
+        "separate-outputs": true
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%Y-%m-%d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-disconnected": "Disconnected ⚠",
+        "tooltip-format": "{ifname} via {gwaddr} "
+    },
+
+    "wireplumber": {
+        "format": "{volume}% 󰕾 ",
+        "format-muted": " 󰝟 ",
+        "format-icons": ["", "", ""],
+        "on-click": "GTK_THEME=Nordic pavucontrol"
+    },
+    
+    "tray": {
+        "spacing": 10
+    },
+   
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "wlogout",
+        "tooltip": false
+    } 
+
+}
